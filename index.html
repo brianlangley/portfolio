@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designing the Future | Brian Langley</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+
+    <!-- Custom cursor -->
+    <div class="cursor">
+        <div class="cursorCircle cursorXL">
+            <svg height="30" width="30">
+                <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+            </svg>
+        </div>
+
+        <div class="cursorCircle cursorSM">
+            <svg height="10" width="10">
+                <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Preloader -->
+    <div class="preloader-container">
+        <div class="sticker-animation">
+            <img src="./images/Hello_my_name_is_sticker.png" alt="Hello my name is sticker" id="loaderSticker"
+                class="animate__animated animate__fadeInDownBig">
+            <h1 class="preloader-text">Brian</h1>
+        </div>
+        <audio src="./sound/spray.mp3" autoplay></audio>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light align-items-center" id="nav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#home" id="roles">Bit Academy Student</a>
+            <button id="navBurger" class="burger hoverable" onclick="toggleNav();" alt="navigation menu"></button>
+        </div>
+    </nav>
+
+    <!-- Navigation container -->
+    <section id="nav-container">
+        <div class="container" id="navInfo">
+            <div id="navName">
+                <img src="./images/logo.png" alt="website logo">
+                <h1>Brian langley</h1>
+            </div>
+            <div id="navInfo-social">
+                <a href="https://www.linkedin.com/in/bel97/" target="_blank" class="hoverable">Linkedin</a>
+                <a href="https://github.com/brianlangley" target="_blank" class="hoverable">Github</a>
+                <a href="mailto:be.langley@icloud.com" class="hoverable">be.langley@icloud.com</a>
+            </div>
+        </div>
+        <!-- Links container -->
+        <div class="container" id="navPic">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg"
+                alt="Your Image" style="width:500px">
+        </div>
+    </section>
+
+    <main>
+        <!-- Home -->
+        <section id="home">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 offset-md-1">
+                        <h1 id="homeName" class="display-2">Brian<br>Langley</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About me -->
+        <section id="about">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 offset-md-1">
+                        <h2 class="small pb-2">About Me</h2>
+                        <div class="subFont" id="aboutMeText">
+                            <p class="mb-3 fs-5 fs-md-4 fs-lg-3">Hello there! I'm Brian, a passionate 2nd-year software
+                                development student at the Bit Academy in Amsterdam. <br> With an international
+                                upbringing
+                                that spans multiple countries including Indonesia, Singapore, Hong Kong, South Africa,
+                                and the UAE. I have been fortunate enough to have had the pleasure of immersing and
+                                embracing myself within several diverse cultures, incorporating their values into my own
+                                personal and professional life.</p>
+                            <p class="mb-3 fs-5 fs-md-4 fs-lg-3">
+                                Front-end development captures my heart, combining creativity with
+                                problem-solving abilities. I am passionate about creating visually stunning and
+                                user-friendly web applications with HTML, CSS, and JavaScript. I am competent in modern
+                                frameworks such as React and Vue.js, also leveraging CSS frameworks such as Bootstrap
+                                and Tailwind CSS for seamless, responsive, and intuitive designs.
+                            </p>
+                            <p class="mb-3 fs-5 fs-md-4 fs-lg-3">
+                                With a keen eye for design and a knack for wire-framing and prototyping using tools such
+                                as Figma, I bring an emphasis on user foucued experiences to every project. By creating
+                                mockups, I provide my clients with a visual representation of the product. This approach
+                                allows me to gather useful and informative feedback, which I can then incorporate and
+                                build upon to refine and improve the overall user journey.
+                            </p>
+                            <p class="mb-3 fs-5 fs-md-4 fs-lg-3">
+                                Moreover, I have experience working with Scrum and Agile methodologies, promoting
+                                effective teamwork, adaptability, and iterative development to deliver successful
+                                projects.
+                            </p>
+                            <p class="mb-3 fs-5 fs-md-4 fs-lg-3">
+                                Additionally, my knowledge extends to backend technologies like PHP. Leveraging MySQL
+                                databases and PHP Data Objects (PDO) for efficient data management, enabling
+                                the development of robust and scalable web applications that effectively handle data and
+                                ensure smooth functionality.
+                            </p>
+                            <p class="mb-3 fs-5 fs-md-4 fs-lg-3">
+                                Beyond technical skills, I pride myself on my strong communication and teamwork
+                                abilities, enabling effective collaboration with colleagues and clients. I believe
+                                that my problem-solving mindset and attention to detail allows me to tackle unique
+                                situations and deliver high-quality results. I'm always open and passionate about
+                                learning new technologies, and expanding my skill set to stay at the forefront of the
+                                rapidly evolving world of software development.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="./js/nav.js"></script>
+    <script src="./js/loader.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

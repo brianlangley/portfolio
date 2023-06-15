@@ -1,0 +1,612 @@
+:root {
+    --red: #E60026;
+    --grey: #A0A0A0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+    font-family: "Network";
+    src: url("../fonts/NetworkFreeVersion.ttf");
+}
+
+@font-face {
+    font-family: "Chakra Petch";
+    src: url("../fonts/ChakraPetch-Regular.ttf");
+}
+
+.subFont {
+    font-family: "Chakra Petch";
+}
+
+.mainFont {
+    font-family: "Network";
+}
+
+/* Custom cursor */
+.cursor {
+    pointer-events: none;
+}
+
+.cursorCircle {
+    position: absolute;
+    mix-blend-mode: difference;
+    z-index: 1000;
+}
+
+.cursorCircle circle {
+    fill: white;
+}
+
+
+
+
+/* Container for preloader */
+.preloader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9997;
+}
+
+#loaderSticker {
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 50vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+
+.preloader-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 7em;
+    font-weight: 600;
+    color: #000;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0);
+    animation: text 1s infinite;
+    margin-top: 7.5vh;
+    font-family: "Network";
+}
+
+/* Main */
+
+/* Home */
+#home {
+    margin-top: 2vh;
+}
+
+/* Define the initial styles for the header tag */
+#homeName {
+    font-family: "Network";
+    font-size: 18em;
+    font-weight: 50;
+    letter-spacing: 0.1em;
+    margin-bottom: 3vh;
+    color: black;
+}
+
+#homeAbout {
+    font-family: "Chakra Petch";
+    margin-left: 33vw;
+    font-size: 1.2em;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: black;
+}
+
+#about {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+#about h2 {
+    /* Spacing between letters */
+    letter-spacing: 0.3em;
+    font-family: "Chakra Petch";
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+#aboutMeText {
+    font-size: 2em;
+    color: black;
+    min-width: 80vw;
+    margin: .5em;
+}
+
+/* Grafitti spray */
+.graffiti-spray {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 100%;
+    pointer-events: none;
+    box-shadow: 0 0 10px black;
+}
+
+#navInfo {
+    margin-bottom: auto;
+}
+
+#navPic {
+    padding-left: 3em;
+}
+
+.navbar-brand {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1em;
+}
+
+nav {
+    margin-top: 1.5vh;
+}
+
+#roles {
+    margin-left: 3vw;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+}
+
+.burger {
+    display: flex;
+    outline: none;
+    border: 0px;
+    margin-right: 3vw;
+    width: 4vw;
+    padding: 1vw;
+    background: transparent;
+    transition: all 250ms ease-out;
+    cursor: pointer;
+}
+
+.burger:before,
+.burger:after {
+    content: '';
+    width: 2.5vw;
+    height: 2px;
+    position: absolute;
+    background: black;
+    transition: all 250ms ease-out;
+}
+
+.burger:before {
+    transform: translateY(-3px);
+}
+
+.burger:after {
+    transform: translateY(3px);
+}
+
+
+.active.burger:before {
+    transform: translateY(0) rotate(45deg);
+}
+
+.active.burger:after {
+    transform: translateY(0) rotate(-45deg);
+}
+
+/* nav container */
+#nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transform: translateX(-100%);
+}
+
+#nav-container.active {
+    transform: translateX(0);
+}
+
+#navBurger {
+    z-index: 101;
+}
+
+.burger.active:before,
+.burger.active:after {
+    background-color: white;
+}
+
+
+#navInfo {
+    color: white;
+    text-transform: uppercase;
+    margin-left: 3vw;
+    margin-bottom: 10vh;
+}
+
+#navInfo img {
+    width: 40vw;
+    height: auto;
+}
+
+#navInfo h1 {
+    font-size: 2em;
+    margin-top: 1vh;
+    margin-left: 0.3vw;
+}
+
+#navLinks {
+    color: white;
+    text-transform: uppercase;
+    margin-left: 3vw;
+    font-size: 4em;
+    gap: 2em;
+}
+
+
+#navInfo-social {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1vw;
+    margin-top: 10vh;
+    font-size: 1em;
+}
+
+#navInfo-social a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 1vh;
+}
+
+/* Media Queries */
+
+/* Mobile styles for screens with width up to 905px */
+@media (max-width: 905px) {
+    #loaderSticker {
+        width: 80vw;
+    }
+
+    .preloader-text {
+        font-size: 5em;
+        margin-top: 5vh;
+    }
+
+    /* Landscape orientation styles for mobile devices only */
+    @media (orientation: landscape) {
+        #loaderSticker {
+            width: 40vw;
+        }
+
+        .preloader-text {
+            font-size: 6em;
+            margin-top: 5vh;
+        }
+
+        /* Additional styles for smaller screens in landscape */
+        @media (max-width: 576px) {
+            #loaderSticker {
+                width: 70vw;
+            }
+
+            .preloader-text {
+                font-size: 5em;
+                margin-top: 2vh;
+            }
+        }
+    }
+}
+
+/* Tablet and desktop styles for screens with width of 1000px and above */
+@media (min-width: 1000px) {
+    #loaderSticker {
+        width: 50vw;
+    }
+
+    .preloader-text {
+        font-size: 9em;
+        margin-top: 7vh;
+    }
+}
+
+/* Mobile styles for screens with width up to 1080px */
+@media (max-width: 1080px) {
+    #homeName {
+        font-size: 10em;
+        margin-top: 3vh;
+        margin-left: 2vw;
+    }
+
+    #homeAbout {
+        margin-left: 10vw;
+        font-size: 1.5em;
+        min-width: 80vw;
+        max-width: 90vw;
+    }
+}
+
+/* Tablet Portrait styles for screens with width between 600px and 799px */
+@media (max-width: 799px) and (min-width: 600px) {
+    #homeName {
+        font-size: 8.5em;
+        letter-spacing: 0.1em;
+        margin-bottom: 3vh;
+        margin-left: 2vw;
+    }
+
+    #homeAbout {
+        margin-left: 2vw;
+        margin-right: 3vw;
+        font-size: 1.2em;
+        letter-spacing: 0.05em;
+        min-width: 85vw;
+        max-width: 98vw;
+    }
+}
+
+/* Tablet Landscape and Portrait styles for screens with width of 800px and above in portrait orientation */
+@media (min-width: 800px) and (orientation: portrait) {
+    #homeName {
+        font-size: 8em;
+        letter-spacing: 0.3em;
+        margin-bottom: 3vh;
+        margin-left: 2vw;
+        margin-top: 3vh;
+    }
+
+    #homeAbout {
+        margin-left: 2vw;
+        margin-right: 3vw;
+        margin-top: 3vh;
+        font-size: 1.5em;
+        letter-spacing: 0.05em;
+        min-width: 75vw;
+    }
+}
+
+/* Mobile Landscape styles for screens with width up to 599px */
+@media (max-width: 599px) {
+    #homeName {
+        font-size: 6em;
+        letter-spacing: 0.2em;
+        margin-bottom: 3vh;
+        margin-left: 3vw;
+        margin-top: 3vh;
+    }
+
+    #homeAbout {
+        margin-left: 3vw;
+        margin-right: 3vw;
+        margin-top: 3vh;
+        font-size: 1.3em;
+        letter-spacing: 0.05em;
+        min-width: 90vw;
+        max-width: 98vw;
+    }
+}
+
+/* Mobile Portrait styles for screens with width up to 399px */
+@media (max-width: 399px) {
+    #homeName {
+        font-size: 4em;
+        letter-spacing: 0.3em;
+        margin-bottom: 3vh;
+        margin-left: 3vw;
+        margin-top: 5vh;
+    }
+
+    #homeAbout {
+        margin-left: 3vw;
+        margin-right: 3vw;
+        margin-top: 5vh;
+        font-size: 1em;
+        letter-spacing: 0.05em;
+        min-width: 90vw;
+        max-width: 98vw;
+    }
+}
+
+
+/* Mobile  */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 0.8em;
+    }
+
+    .burger::before,
+    .burger::after {
+        width: 6vw;
+        margin-right: 2vw;
+    }
+
+    #navInfo {
+        margin-bottom: 10vh;
+    }
+
+    #nav-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #navInfo img {
+        margin-top: 10vh;
+    }
+
+    #navInfo-social {
+        margin-top: 5vh;
+        font-size: 1em;
+    }
+
+    #navLinks {
+        font-size: 2em;
+        padding-bottom: 50vh;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar-brand {
+        font-size: 0.8em;
+    }
+
+    .burger::before,
+    .burger::after {
+        width: 6vw;
+        margin-right: 2vw;
+    }
+
+    #navInfo {
+        margin-bottom: 10vh;
+    }
+
+    #nav-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #navInfo img {
+        margin-top: 10vh;
+    }
+
+    #navInfo-social {
+        margin-top: 5vh;
+        font-size: 1em;
+    }
+
+    #navLinks {
+        font-size: 2em;
+        padding-bottom: 50vh;
+    }
+}
+
+@media (max-width: 900px) and (min-height: 1000px) and (orientation: portrait) {
+
+    .navbar-brand {
+        font-size: 0.8em;
+    }
+
+    .burger::before,
+    .burger::after {
+        width: 6vw;
+        margin-right: 2vw;
+    }
+
+    #navInfo {
+        margin-bottom: 0vh;
+    }
+
+    #nav-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #navInfo img {
+        margin-top: 10vh;
+        width: 50vw;
+    }
+
+    #navInfo-social {
+        margin-top: 3vh;
+        font-size: 1em;
+        padding-bottom: 2vh;
+    }
+
+    #navLinks {
+        font-size: 3em;
+        padding-bottom: 10vh;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 1000px) and (orientation: landscape) {
+    .navbar-brand {
+        font-size: 0.8em;
+    }
+
+    .burger::before,
+    .burger::after {
+        width: 6vw;
+        margin-right: 2vw;
+    }
+
+    #navInfo {
+        margin-bottom: 40vh;
+    }
+
+    #nav-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #navInfo img {
+        margin-top: 10vh;
+        width: 33vw;
+    }
+
+    #navInfo-social {
+        margin-top: 3vh;
+        font-size: 1em;
+    }
+
+    #navLinks {
+        font-size: 2em;
+        padding-bottom: 20vh;
+    }
+}
+
+@media (min-width: 200px) and (max-width: 576px) {
+    .navbar-brand {
+        font-size: 0.8em;
+    }
+
+    .burger::before,
+    .burger::after {
+        width: 6vw;
+        margin-right: 2vw;
+    }
+
+    #navInfo {
+        margin-bottom: 10vh;
+    }
+
+    #nav-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #navInfo img {
+        margin-top: 10vh;
+        width: 40vw;
+    }
+
+    #navInfo-social {
+        margin-top: 5vh;
+        font-size: 1em;
+        padding-bottom: 0vh;
+    }
+
+    #navLinks {
+        font-size: 1.8em;
+        padding-bottom: 20vh;
+    }
+}
