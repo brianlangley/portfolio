@@ -22,11 +22,21 @@ if (preloaderPlayed) {
     gsap.from(home, { opacity: 0, duration: 4, delay: 10, y: 60 });
 }
 
-// Custom mouse
 document.body.style.cursor = 'none';
 const bigBall = document.querySelector('.cursorXL');
 const smallBall = document.querySelector('.cursorSM');
 const hoverables = document.querySelectorAll('.hoverable');
+const startMouse = document.getElementById('startMouse');
+
+TweenMax.set(bigBall, {
+    x: startMouse.getBoundingClientRect().left - 15,
+    y: startMouse.getBoundingClientRect().top - 15
+});
+
+TweenMax.set(smallBall, {
+    x: startMouse.getBoundingClientRect().left - 5,
+    y: startMouse.getBoundingClientRect().top - 14
+});
 
 document.body.addEventListener('mousemove', onMouseMove);
 document.addEventListener('mousedown', onMouseDown);
@@ -79,18 +89,6 @@ function onMouseHover() {
         scale: 2
     });
 }
-
-document.addEventListener('mousedown', () => {
-    TweenMax.to(bigBall, 0.3, {
-        scale: 0
-    });
-});
-
-document.addEventListener('mouseup', () => {
-    TweenMax.to(bigBall, 0.3, {
-        scale: 1
-    });
-});
 
 document.addEventListener('selectstart', e => {
     e.preventDefault();
