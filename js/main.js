@@ -117,12 +117,6 @@ if (!isSmallScreen) {
                 scrollEffect.play();
                 isScrolling = true;
             }
-        } else {
-            // Scrolling up
-            if (!isScrolling) {
-                scrollEffect.reverse();
-                isScrolling = true;
-            }
         }
 
         clearTimeout(isScrolling);

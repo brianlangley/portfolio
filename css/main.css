@@ -9,16 +9,6 @@
     box-sizing: border-box;
 }
 
-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-
 /* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
@@ -58,9 +48,6 @@ canvas {
 .cursorCircle circle {
     fill: white;
 }
-
-
-
 
 /* Container for preloader */
 .preloader-container {
