@@ -31,6 +31,7 @@
 }
 
 .mainContent {
+    max-width: 80vw;
     z-index: 2;
 }
 
@@ -122,13 +123,14 @@
     margin-bottom: 2vh;
 }
 
-#about h2 {
+.headers {
     /* Spacing between letters */
-    letter-spacing: 0.3em;
+    letter-spacing: 0.5em;
     font-family: "Chakra Petch";
-    font-size: 1em;
+    font-size: 1.5em;
     text-transform: uppercase;
 }
+
 
 #aboutMeText {
     font-size: 2em;
@@ -149,6 +151,8 @@
     pointer-events: none;
     box-shadow: 0 0 10px black;
 }
+
+
 
 #navInfo {
     margin-bottom: auto;
@@ -171,6 +175,7 @@ nav {
 #roles {
     margin-left: 3vw;
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+    color: black;
 }
 
 .burger {
@@ -393,8 +398,8 @@ nav {
         font-size: 6em;
         letter-spacing: 0.2em;
         margin-bottom: 3vh;
-        margin-left: 3vw;
-        margin-top: 3vh;
+        margin-left: 1vw;
+        margin-top: 1vh;
     }
 
     #homeAbout {

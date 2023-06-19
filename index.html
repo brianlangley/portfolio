@@ -14,6 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/cyberpunk-css-main/cyberpunk.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
@@ -60,8 +61,8 @@
                 <h1>Bri<span id="startMouse"></span>an langley</h1>
             </div>
             <div id="navInfo-social">
-                <a href="https://www.linkedin.com/in/bel97/" target="_blank" class="hoverable">Linkedin</a>
-                <a href="https://github.com/brianlangley" target="_blank" class="hoverable">Github</a>
+                <a href="https://www.linkedin.com/in/bel97/" target="_blank" class="hoverable pb-4">Linkedin</a>
+                <a href="https://github.com/brianlangley" target="_blank" class="hoverable pb-4">Github</a>
                 <a href="mailto:be.langley@icloud.com" class="hoverable">be.langley@icloud.com</a>
             </div>
         </div>
@@ -88,7 +89,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6 offset-md-1">
-                        <h2 class="small pb-2">About Me</h2>
+                        <h2 class="display-5 pb-2 mainFont cyber-glitch-2">About me</h2>
                         <div class="subFont" id="aboutMeText">
                             <p class="mb-3 fs-5 fs-md-4 fs-lg-3">Hello there! I'm Brian, a passionate 2nd-year software
                                 development student at the Bit Academy in Amsterdam. <br> With an international
@@ -129,13 +130,93 @@
                 </div>
             </div>
         </section>
-        <canvas id="draw"></canvas>
+
+        <!-- Projects -->
+        <section id="projects" class="container">
+
+            <div class="row justify-content-center mt-5">
+                <div class="col-12 col-md-6 text-center">
+                    <h2 class="mainFont display-1 cyber-glitch-2">Projects</h2>
+                </div>
+            </div>
+
+            <article class="row pt-5 mb-5" id="project1">
+                <div class="col-md-7 d-flex align-items-center">
+                    <div>
+                        <h2 class="headers cyber-glitch-0">Project: <span class="text-muted">Wanderlust</span></h2>
+                        <p class="lead subFont">
+                            Inspired by platforms like Pinterest, Wanderlust is a photo liking application developed in
+                            vanilla JavaScript.
+                            It provides users with a visual journey through a collection of stunning photographs. Where
+                            they can browse
+                            through a diverse range of images, like their favorite photos, and store them as personal
+                            favorites.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-5 cyber-tile-big project">
+                    <a href="https://github.com/brianlangley/Wanderlust" target="_blank">
+                        <img class="img-fluid mx-auto cyber-glitch-1" src="./images/Wanderlust.png"
+                            alt="Wanderlust Github Link">
+                    </a>
+                </div>
+            </article>
+
+            <article class="row pt-5 mb-5" id="project2">
+                <div class="col-md-7 order-md-2 d-flex align-items-center">
+                    <div>
+                        <h2 class="headers cyber-glitch-0">BitGreen: <span class="text-muted">The Green Coin</span></h2>
+                        <p class="lead subFont">
+                            BitGreen is the front-end implementation of a fictional cryptocurrency website promoting
+                            eco-friendly
+                            initiatives. It consists of two sites developed using Bootstrap and Tailwind CSS, showcasing
+                            visually appealing
+                            and responsive designs.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-5 order-md-1 cyber-tile-big project">
+                    <a href="https://github.com/brianlangley/BitGreen" target="_blank">
+                        <img class="img-fluid mx-auto cyber-glitch-1" src="./images/BitGreen.gif"
+                            alt="Green screen Falling etherium coin Stock Videos by Vecteezy">
+                    </a>
+                </div>
+            </article>
+
+            <article class="row pt-5 mb-5" id="project3">
+                <div class="col-md-7 d-flex align-items-center">
+                    <div>
+                        <h2 class="headers cyber-glitch-2">Lambiek: <span class="text-muted">Comiclopedia
+                                <small style="font-size: .5em;">v</small>2.0</span>
+                        </h2>
+                        <p class="lead subFont">
+                            Inspired by platforms like Pinterest, Wanderlust is a photo liking application developed in
+                            vanilla JavaScript.
+                            It provides users with a visual journey through a collection of stunning photographs. Where
+                            they can browse
+                            through a diverse range of images, like their favorite photos, and store them as personal
+                            favorites.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-5 cyber-tile-big project">
+                    <a href="https://github.com/brianlangley/Lambiek" target="_blank">
+                        <img class="img-fluid mx-auto cyber-glitch-0" src="./images/Lambiek.png"
+                            alt="Lambiek Github Link">
+                    </a>
+                </div>
+            </article>
+
+        </section>
+
+
     </main>
 
     <!-- Scripts -->
     <script src="./js/loader.js"></script>
     <script src="./js/nav.js"></script>
     <script src="./js/main.js"></script>
+
 </body>
 
 </html>
