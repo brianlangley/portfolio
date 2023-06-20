@@ -16,24 +16,42 @@ window.addEventListener('DOMContentLoaded', () => {
     if (preloaderText) {
         const letters = preloaderText.textContent.split('');
         preloaderText.textContent = '';
-        letters.forEach((letter, index) => {
-            const span = document.createElement('span');
-            span.textContent = letter;
-            preloaderText.append(span);
 
-            // Apply GSAP animation with delay
-            gsap.fromTo(
-                span,
-                { x: -100, opacity: 0, textShadow: '0 0 20px rgba(0, 0, 0, 1)' }, // Initial properties with shadow
-                {
-                    x: 0,
-                    opacity: 1,
-                    duration: 3,
-                    delay: 1.6 + index * 0.8, // Delay each letter
-                    textShadow: '0 0 10px rgba(0, 0, 0, 1)', // Keep the shadow after the animation
-                }
-            );
-        });
+        // Function to start the animation
+        const startAnimation = () => {
+            letters.forEach((letter, index) => {
+                const span = document.createElement('span');
+                span.textContent = letter;
+                preloaderText.append(span);
+
+                // Apply GSAP animation with delay
+                gsap.fromTo(
+                    span,
+                    { x: -100, opacity: 0, textShadow: '0 0 20px rgba(0, 0, 0, 1)' }, // Initial properties with shadow
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 3,
+                        delay: 1.6 + index * 0.8, // Delay each letter
+                        textShadow: '0 0 10px rgba(0, 0, 0, 1)', // Keep the shadow after the animation
+                    }
+                );
+            });
+        };
+
+        // Check if audio is already loaded
+        const audio = document.querySelector('audio');
+        if (audio.readyState >= 4) {
+            startAnimation();
+        } else {
+            // Event listener for audio loaded
+            audio.addEventListener('canplaythrough', () => {
+                startAnimation();
+            });
+        }
+
+        // Play the audio
+        audio.play();
     }
 
     // Remove preloader after delay with fade out effect
