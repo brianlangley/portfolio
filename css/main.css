@@ -285,6 +285,10 @@ nav {
     margin-bottom: 1vh;
 }
 
+a#roles.navbar-brand {
+    background: transparent;
+}
+
 /* Media Queries */
 
 /* Mobile styles for screens with width up to 905px */

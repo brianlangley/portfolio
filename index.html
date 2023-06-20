@@ -5,9 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#000000">
     <title>Designing the Future | Brian Langley</title>
-    <!-- Favicon -->
+    <meta name="description"
+        content="Designing the Future | Brian Langley - A passionate 2nd-year software development student specializing in front-end development.
+        Creating visually stunning and user-friendly web applications with HTML, CSS, and JavaScript. Experienced in modern frameworks like React and Vue.js.
+        Emphasizing user-focused experiences and utilizing design tools like Figma. Adaptable, detail-oriented, and constantly learning.">
+    <meta name="keywords"
+        content="software development, front-end development, web applications, HTML, CSS, JavaScript, React, Vue.js, user experience, design, Figma, Bit Academy, Brian Langley">
+    <meta name="author" content="Brian Langley">
+    <meta name="robots" content="index, follow">
     <link rel="shortcut icon" href="./images/favicon.gif" type="image/x-icon">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/cyberpunk-css-main/cyberpunk.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
@@ -15,8 +26,6 @@
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/cyberpunk-css-main/cyberpunk.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
 </head>
@@ -52,9 +61,12 @@
     <nav class="navbar navbar-expand-lg navbar-light align-items-center" id="nav">
         <div class="container-fluid">
             <a class="navbar-brand" href="#home" id="roles">Bit Academy Student</a>
-            <button id="navBurger" class="burger hoverable" onclick="toggleNav();" alt="navigation menu"></button>
+            <button id="navBurger" class="burger hoverable" onclick="toggleNav();" aria-label="Navigation Menu">
+                <span class="visually-hidden">Toggle Navigation Menu</span>
+            </button>
         </div>
     </nav>
+
 
     <!-- Navigation container -->
     <section id="nav-container">
@@ -161,7 +173,7 @@
                 <div class="col-md-5 cyber-tile-big project hoverable">
                     <a href="https://github.com/brianlangley/Wanderlust" target="_blank">
                         <img class="img-fluid mx-auto cyber-glitch-1" src="./images/Wanderlust.png"
-                            alt="Wanderlust Github Link">
+                            alt="Wanderlust Github Link" loading="lazy">
                     </a>
                 </div>
             </article>
@@ -182,7 +194,7 @@
                 <div class="col-md-5 order-md-1 cyber-tile-big project hoverable">
                     <a href="https://github.com/brianlangley/BitGreen" target="_blank">
                         <img class="img-fluid mx-auto cyber-glitch-1" src="./images/BitGreen.gif"
-                            alt="Green screen Falling etherium coin Stock Videos by Vecteezy">
+                            alt="Green screen Falling etherium coin Stock Videos by Vecteezy" loading="lazy">
                     </a>
                 </div>
             </article>
@@ -205,7 +217,7 @@
                 <div class="col-md-5 cyber-tile-big project hoverable">
                     <a href="https://github.com/brianlangley/Lambiek" target="_blank">
                         <img class="img-fluid mx-auto cyber-glitch-0" src="./images/Lambiek.gif"
-                            alt="Lambiek Github Link">
+                            alt="Lambiek Github Link" loading="lazy">
                     </a>
                 </div>
             </article>
