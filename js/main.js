@@ -19,7 +19,7 @@ if (preloaderPlayed) {
     gsap.from(home, { opacity: 0, duration: 2, delay: 1, y: -120 });
 } else {
     gsap.fromTo(nav, { opacity: 0 }, { opacity: 1, duration: 1, delay: 9 });
-    gsap.from(home, { opacity: 0, duration: 4, delay: 10, y: 60 });
+    gsap.from(home, { opacity: 0, duration: 4, delay: 16, y: 60 });
 }
 
 document.body.style.cursor = 'none';
@@ -131,3 +131,51 @@ if (!isSmallScreen) {
         scrollEffect.play();
     }, 1000);
 }
+
+// Function to animate the articles
+function animateArticles() {
+    const article1 = document.querySelector('#project1');
+    const article2 = document.querySelector('#project2');
+    const article3 = document.querySelector('#project3');
+
+    const articles = [article1, article2, article3];
+
+    articles.forEach((article, index) => {
+        let direction = index % 2 === 0 ? '100%' : '-100%';
+        gsap.from(article, {
+            scrollTrigger: {
+                trigger: article,
+                start: 'top 80%',
+                end: 'bottom 80%',
+                toggleActions: 'play none none reverse'
+            },
+            x: direction,
+            opacity: 0,
+            duration: 1,
+            delay: index * 0.5 // Adjust the delay value as desired
+        });
+    });
+}
+
+// Function to initialize the animations when the #projects section is in view
+function initAnimations() {
+    const projectsSection = document.querySelector('#projects');
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    animateArticles();
+                    observer.unobserve(projectsSection); // Stop observing once the animations are triggered
+                }
+            });
+        },
+        { rootMargin: '0px' } // Adjust the rootMargin value as desired
+    );
+
+    observer.observe(projectsSection);
+}
+
+// Call the initialization function once the document is ready
+document.addEventListener('DOMContentLoaded', function () {
+    initAnimations();
+});
