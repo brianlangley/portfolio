@@ -134,32 +134,32 @@ if (!isSmallScreen) {
 
 // Function to animate the articles
 function animateArticles() {
-    const article1 = document.querySelector('#project1');
-    const article2 = document.querySelector('#project2');
-    const article3 = document.querySelector('#project3');
+    const article1 = document.querySelector("#project1");
+    const article2 = document.querySelector("#project2");
+    const article3 = document.querySelector("#project3");
 
     const articles = [article1, article2, article3];
 
     articles.forEach((article, index) => {
-        let direction = index % 2 === 0 ? '100%' : '-100%';
+        let direction = index % 2 === 0 ? "100%" : "-100%";
         gsap.from(article, {
             scrollTrigger: {
                 trigger: article,
-                start: 'top 80%',
-                end: 'bottom 80%',
-                toggleActions: 'play none none reverse'
+                start: "top 80%",
+                end: "bottom 80%",
+                toggleActions: "play none none reverse",
             },
             x: direction,
             opacity: 0,
             duration: 1,
-            delay: index * 0.5 // Adjust the delay value as desired
+            delay: index * 0.5, // Adjust the delay value as desired
         });
     });
 }
 
 // Function to initialize the animations when the #projects section is in view
 function initProjectAnimations() {
-    const projectsSection = document.querySelector('#projects');
+    const projectsSection = document.querySelector("#projects");
     const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
@@ -169,7 +169,7 @@ function initProjectAnimations() {
                 }
             });
         },
-        { rootMargin: '0px' } // Adjust the rootMargin value as desired
+        { rootMargin: "0px" } // Adjust the rootMargin value as desired
     );
 
     observer.observe(projectsSection);
@@ -177,26 +177,31 @@ function initProjectAnimations() {
 
 // Function to animate the project title
 function animateProjectTitle() {
-    const projectTitle = document.querySelector('#project-title');
+    const projectTitle = document.querySelector("#project-title");
     gsap.from(projectTitle, {
         scrollTrigger: {
             trigger: projectTitle,
-            start: 'top 80%',
-            end: 'bottom 80%',
-            toggleActions: 'play none none reverse'
+            start: "top 80%",
+            end: "bottom 80%",
+            toggleActions: "play none none reverse",
         },
         opacity: 0,
-        duration: 1
+        duration: 1,
     });
 }
 
 // Call the initialization function once the document is ready
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
     const isSmallScreen = window.innerWidth < 800;
 
     if (isSmallScreen) {
-        animateArticles();
-        animateProjectTitle();
+        // Remove animations for smaller screens
+        const articles = document.querySelectorAll(".article");
+        articles.forEach((article) => {
+            article.style.opacity = 1;
+        });
+        const projectTitle = document.querySelector("#project-title");
+        projectTitle.style.opacity = 1;
     } else {
         initProjectAnimations();
         animateProjectTitle();
