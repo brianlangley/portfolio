@@ -158,7 +158,7 @@ function animateArticles() {
 }
 
 // Function to initialize the animations when the #projects section is in view
-function initAnimations() {
+function initProjectAnimations() {
     const projectsSection = document.querySelector('#projects');
     const observer = new IntersectionObserver(
         (entries) => {
@@ -175,7 +175,30 @@ function initAnimations() {
     observer.observe(projectsSection);
 }
 
+// Function to animate the project title
+function animateProjectTitle() {
+    const projectTitle = document.querySelector('#project-title');
+    gsap.from(projectTitle, {
+        scrollTrigger: {
+            trigger: projectTitle,
+            start: 'top 80%',
+            end: 'bottom 80%',
+            toggleActions: 'play none none reverse'
+        },
+        opacity: 0,
+        duration: 1
+    });
+}
+
 // Call the initialization function once the document is ready
 document.addEventListener('DOMContentLoaded', function () {
-    initAnimations();
+    const isSmallScreen = window.innerWidth < 800;
+
+    if (isSmallScreen) {
+        animateArticles();
+        animateProjectTitle();
+    } else {
+        initProjectAnimations();
+        animateProjectTitle();
+    }
 });
