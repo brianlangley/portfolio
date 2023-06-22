@@ -61,21 +61,25 @@
     <nav class="navbar navbar-expand-lg navbar-light align-items-center d-flex flex-row flex-nowrap" id="nav">
         <div class="container-fluid">
             <a class="navbar-brand" href="#home" id="roles">Bit Academy Student</a>
-            <div class="d-flex flex-row gap-2" id="social-links">
-                <a class="hoverable btn btn-link" aria-label="Social links" href="mailto:be.langley@icloud.com">
-                    <img src="./images/icons/email.png" alt="Email" class="social-icon">
+            <div class="d-flex flex-row gap-3" id="social-links">
+                <a class="hoverable btn-link" aria-label="Email Link" href="mailto:be.langley@icloud.com">
+                    <img src="./images/icons/email.png" alt="Email" class="social-icon drop-shadow">
                 </a>
-                <a class="hoverable btn btn-link" aria-label="Social links" href="https://github.com/brianlangley"
+                <a class="hoverable btn-link" aria-label="Github Link" href="https://github.com/brianlangley"
                     target="_blank">
-                    <img src="./images/icons/github.png" alt="GitHub" class="social-icon">
+                    <img src="./images/icons/github.png" alt="GitHub" class="social-icon drop-shadow">
                 </a>
-                <a class="hoverable btn btn-link" aria-label="Social links" href="https://www.linkedin.com/in/bel97/"
+                <a class="hoverable btn-link" aria-label="LinkedIn Link" href="https://www.linkedin.com/in/bel97/"
                     target="_blank">
-                    <img src="./images/icons/linkedin.png" alt="LinkedIn" class="social-icon">
+                    <img src="./images/icons/linkedin.png" alt="LinkedIn" class="social-icon drop-shadow">
+                </a>
+                <a class="hoverable btn-link" aria-label="Download CV" href="./assets/CV Brian Langley.pdf" download>
+                    <img src="./images/icons/cv.png" alt="CV" class="social-icon drop-shadow">
                 </a>
             </div>
         </div>
     </nav>
+
 
     <main>
         <!-- Home -->
@@ -229,6 +233,33 @@
                 </div>
             </article>
 
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="container">
+            <!-- Contact me h1 -->
+            <div class="row justify-content-center mt-5">
+                <div class="col-12 col-md-6 text-center">
+                    <h2 class="mainFont display-1 cyber-glitch-2" id="contact-title">Contact</h2>
+                </div>
+            </div>
+            <form>
+                <div class="cyber-input">
+                    <input type="text" placeholder="Name" />
+                </div>
+
+                <div class="cyber-input">
+                    <input type="email" placeholder="Email" />
+                </div>
+
+                <div class="cyber-input">
+                    <textarea placeholder="Message"></textarea>
+                </div>
+
+                <button class="cyber-button bg-red fg-white" type="submit">
+                    Submit
+                </button>
+            </form>
         </section>
 
 

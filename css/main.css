@@ -50,6 +50,10 @@
     fill: white;
 }
 
+.drop-shadow {
+    filter: drop-shadow(15px 13px 49px var(--grey));
+}
+
 /* Container for preloader */
 .preloader-container {
     position: fixed;
@@ -176,115 +180,6 @@ nav {
     color: black;
 }
 
-.burger {
-    display: flex;
-    outline: none;
-    border: 0px;
-    margin-right: 3vw;
-    width: 4vw;
-    padding: 1vw;
-    background: transparent;
-    transition: all 250ms ease-out;
-    cursor: pointer;
-}
-
-.burger:before,
-.burger:after {
-    content: '';
-    width: 2.5vw;
-    height: 2px;
-    position: absolute;
-    background: black;
-    transition: all 250ms ease-out;
-}
-
-.burger:before {
-    transform: translateY(-3px);
-}
-
-.burger:after {
-    transform: translateY(3px);
-}
-
-
-.active.burger:before {
-    transform: translateY(0) rotate(45deg);
-}
-
-.active.burger:after {
-    transform: translateY(0) rotate(-45deg);
-}
-
-/* nav container */
-#nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-width: 100vw;
-    min-height: 100vh;
-    background: black;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    transform: translateX(-100%);
-}
-
-#nav-container.active {
-    transform: translateX(0);
-}
-
-#navBurger {
-    z-index: 101;
-}
-
-.burger.active:before,
-.burger.active:after {
-    background-color: white;
-}
-
-
-#navInfo {
-    color: white;
-    text-transform: uppercase;
-    margin-left: 3vw;
-    margin-bottom: 10vh;
-}
-
-#navInfo img {
-    width: 40vw;
-    height: auto;
-}
-
-#navInfo h1 {
-    font-size: 2em;
-    margin-top: 1vh;
-    margin-left: 0.3vw;
-}
-
-#navLinks {
-    color: white;
-    text-transform: uppercase;
-    margin-left: 3vw;
-    font-size: 4em;
-    gap: 2em;
-}
-
-
-#navInfo-social {
-    display: flex;
-    flex-direction: column;
-    margin-left: 1vw;
-    margin-top: 10vh;
-    font-size: 1em;
-}
-
-#navInfo-social a {
-    color: white;
-    text-decoration: none;
-    margin-bottom: 1vh;
-}
-
 a#roles.navbar-brand {
     background: transparent;
     font-size: 1em;
@@ -296,7 +191,7 @@ a#roles.navbar-brand {
 }
 
 .social-icon {
-    width: 2.5em;
+    width: 2.2em;
     height: auto;
 }
 
