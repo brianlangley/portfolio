@@ -287,6 +287,17 @@ nav {
 
 a#roles.navbar-brand {
     background: transparent;
+    font-size: 1em;
+    padding: .5em;
+}
+
+#social-links {
+    margin-right: 3em;
+}
+
+.social-icon {
+    width: 2.5em;
+    height: auto;
 }
 
 /* Media Queries */
@@ -300,6 +311,11 @@ a#roles.navbar-brand {
     .preloader-text {
         font-size: 5em;
         margin-top: 5vh;
+    }
+
+    .social-icon {
+        width: 2em;
+        height: auto;
     }
 
     /* Landscape orientation styles for mobile devices only */

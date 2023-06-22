@@ -58,34 +58,24 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light align-items-center" id="nav">
+    <nav class="navbar navbar-expand-lg navbar-light align-items-center d-flex flex-row flex-nowrap" id="nav">
         <div class="container-fluid">
             <a class="navbar-brand" href="#home" id="roles">Bit Academy Student</a>
-            <button id="navBurger" class="burger hoverable" onclick="toggleNav();" aria-label="Navigation Menu">
-                <span class="visually-hidden">Toggle Navigation Menu</span>
-            </button>
+            <div class="d-flex flex-row gap-2" id="social-links">
+                <a class="hoverable btn btn-link" aria-label="Social links" href="mailto:be.langley@icloud.com">
+                    <img src="./images/icons/email.png" alt="Email" class="social-icon">
+                </a>
+                <a class="hoverable btn btn-link" aria-label="Social links" href="https://github.com/brianlangley"
+                    target="_blank">
+                    <img src="./images/icons/github.png" alt="GitHub" class="social-icon">
+                </a>
+                <a class="hoverable btn btn-link" aria-label="Social links" href="https://www.linkedin.com/in/bel97/"
+                    target="_blank">
+                    <img src="./images/icons/linkedin.png" alt="LinkedIn" class="social-icon">
+                </a>
+            </div>
         </div>
     </nav>
-
-
-    <!-- Navigation container -->
-    <section id="nav-container">
-        <div class="container" id="navInfo">
-            <div id="navName">
-                <img src="./images/logo.png" alt="website logo">
-                <h1>Bri<span id="startMouse"></span>an langley</h1>
-            </div>
-            <div id="navInfo-social">
-                <a href="https://www.linkedin.com/in/bel97/" target="_blank" class="hoverable pb-4">Linkedin</a>
-                <a href="https://github.com/brianlangley" target="_blank" class="hoverable pb-4">Github</a>
-                <a href="mailto:be.langley@icloud.com" class="hoverable">be.langley@icloud.com</a>
-            </div>
-        </div>
-        <!-- Links container -->
-        <div class="container" id="navPic">
-            <img src="" alt="Photo of myself" style="width:500px">
-        </div>
-    </section>
 
     <main>
         <!-- Home -->
@@ -93,7 +83,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-10 offset-md-1 text-center">
-                        <h1 id="homeName">Brian<br>Langley</h1>
+                        <h1 id="homeName">Bri<span id="startMouse"></span>an<br>Langley</h1>
                     </div>
                 </div>
             </div>
@@ -107,25 +97,34 @@
                     <div class="col-md-6 offset-md-1">
                         <h2 class="display-5 pb-2 mainFont cyber-glitch-2">About me</h2>
                         <div class="subFont" id="aboutMeText">
-                            <p class="mb-3 fs-5 fs-md-4 fs-lg-3">Hello there! I'm Brian, a passionate 2nd-year software
+                            <p class="mb-3 fs-5 fs-md-4 fs-lg-3">Hello there! I'm Brian, a passionate 2nd-year
+                                software
                                 development student at the Bit Academy in Amsterdam. <br> With an international
                                 upbringing
-                                that spans multiple countries including Indonesia, Singapore, Hong Kong, South Africa,
+                                that spans multiple countries including Indonesia, Singapore, Hong Kong, South
+                                Africa,
                                 and the UAE. I have been fortunate enough to have had the pleasure of immersing and
-                                embracing myself within several diverse cultures, incorporating their values into my own
+                                embracing myself within several diverse cultures, incorporating their values into my
+                                own
                                 personal and professional life.</p>
                             <p class="mb-3 fs-5 fs-md-4 fs-lg-3">
                                 Front-end development captures my heart, combining creativity with
                                 problem-solving abilities. I am passionate about creating visually stunning and
-                                user-friendly web applications with HTML, CSS, and JavaScript. I am competent in modern
-                                frameworks such as React and Vue.js, also leveraging CSS frameworks such as Bootstrap
+                                user-friendly web applications with HTML, CSS, and JavaScript. I am competent in
+                                modern
+                                frameworks such as React and Vue.js, also leveraging CSS frameworks such as
+                                Bootstrap
                                 and Tailwind CSS for seamless, responsive, and intuitive designs.
                             </p>
                             <p class="mb-3 fs-5 fs-md-4 fs-lg-3">
-                                With a keen eye for design and a knack for wire-framing and prototyping using tools such
-                                as Figma, I bring an emphasis on user foucued experiences to every project. By creating
-                                mockups, I provide my clients with a visual representation of the product. This approach
-                                allows me to gather useful and informative feedback, which I can then incorporate and
+                                With a keen eye for design and a knack for wire-framing and prototyping using tools
+                                such
+                                as Figma, I bring an emphasis on user foucued experiences to every project. By
+                                creating
+                                mockups, I provide my clients with a visual representation of the product. This
+                                approach
+                                allows me to gather useful and informative feedback, which I can then incorporate
+                                and
                                 build upon to refine and improve the overall user journey.
                             </p>
                             <p class="mb-3 fs-5 fs-md-4 fs-lg-3">
@@ -138,7 +137,8 @@
                                 abilities, enabling effective collaboration with colleagues and clients. I believe
                                 that my problem-solving mindset and attention to detail allows me to tackle unique
                                 situations and deliver high-quality results. I'm always open and passionate about
-                                learning new technologies, and expanding my skill set to stay at the forefront of the
+                                learning new technologies, and expanding my skill set to stay at the forefront of
+                                the
                                 rapidly evolving world of software development.
                             </p>
                         </div>
@@ -161,11 +161,14 @@
                     <div>
                         <h2 class="headers cyber-glitch-0">Project: <span class="text-muted">Wanderlust</span></h2>
                         <p class="lead subFont">
-                            Inspired by platforms like Pinterest, Wanderlust is a photo liking application developed in
+                            Inspired by platforms like Pinterest, Wanderlust is a photo liking application developed
+                            in
                             vanilla JavaScript.
-                            It provides users with a visual journey through a collection of stunning photographs. Where
+                            It provides users with a visual journey through a collection of stunning photographs.
+                            Where
                             they can browse
-                            through a diverse range of images, like their favorite photos, and store them as personal
+                            through a diverse range of images, like their favorite photos, and store them as
+                            personal
                             favorites.
                         </p>
                     </div>
@@ -180,11 +183,13 @@
             <article class="row pt-5 mb-5" id="project2">
                 <div class="col-md-7 order-md-2 d-flex align-items-center">
                     <div>
-                        <h2 class="headers cyber-glitch-0">BitGreen: <span class="text-muted">The Green Coin</span></h2>
+                        <h2 class="headers cyber-glitch-0">BitGreen: <span class="text-muted">The Green Coin</span>
+                        </h2>
                         <p class="lead subFont">
                             BitGreen is the front-end implementation of a fictional cryptocurrency website promoting
                             eco-friendly
-                            initiatives. It consists of two sites developed using Bootstrap and Tailwind CSS, showcasing
+                            initiatives. It consists of two sites developed using Bootstrap and Tailwind CSS,
+                            showcasing
                             visually appealing
                             and responsive designs.
                         </p>
@@ -205,9 +210,12 @@
                                 <small style="font-size: .5em;">v</small>2.0</span>
                         </h2>
                         <p class="lead subFont mt-4">
-                            Undertaken by a group of enthusiastic students from the Bit Academy. The team embarked on a
-                            mission to revitalise and enhance the existing Lambiek.net Comic Wikipedia, also known as
-                            the Comiclopedia. Creating a new and improved version of the Comiclopedia that incorporates
+                            Undertaken by a group of enthusiastic students from the Bit Academy. The team embarked
+                            on a
+                            mission to revitalise and enhance the existing Lambiek.net Comic Wikipedia, also known
+                            as
+                            the Comiclopedia. Creating a new and improved version of the Comiclopedia that
+                            incorporates
                             modern technologies and innovative features to provide an even more comprehensive and
                             engaging experience for users.
                         </p>
