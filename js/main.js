@@ -137,8 +137,9 @@ function animateArticles() {
     const article1 = document.querySelector("#project1");
     const article2 = document.querySelector("#project2");
     const article3 = document.querySelector("#project3");
+    const github = document.querySelector("#githubLink");
 
-    const articles = [article1, article2, article3];
+    const articles = [article1, article2, article3, github];
 
     articles.forEach((article, index) => {
         let direction = index % 2 === 0 ? "100%" : "-100%";

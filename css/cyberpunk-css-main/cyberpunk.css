@@ -759,7 +759,6 @@
 .cyber-tile,
 .cyber-tile-small,
 .cyber-tile-big {
-    --tile-width: 360px;
     --tile-padding: 4px;
     --tile-edges: 20px;
     --label-margins: calc(var(--tile-edges) - var(--tile-padding));
@@ -801,7 +800,6 @@
 
 /*Overriding the values*/
 .cyber-tile-big {
-    --tile-width: 480px;
     --tile-edges: 26px;
 }
 
