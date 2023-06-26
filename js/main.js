@@ -209,24 +209,27 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+// Wait for the document to be fully loaded
 document.addEventListener('DOMContentLoaded', function () {
-    const contactSection = document.querySelector('#contact');
+    // Select the elements you want to animate
+    const sections = document.querySelectorAll('.mainContent');
 
-    if (contactSection) {
+    // Loop through each section
+    sections.forEach(section => {
+        // Create a new ScrollTrigger for each section
         gsap.registerPlugin(ScrollTrigger);
 
-        gsap.from(contactSection, {
+        gsap.from(section, {
             y: 100,
             opacity: 0,
             duration: 1,
             ease: 'power2.out',
             scrollTrigger: {
-                trigger: contactSection,
+                trigger: section,
                 start: 'top 80%',
                 end: 'bottom 80%',
                 toggleActions: 'play none none reverse',
             }
         });
-    }
+    });
 });
-
