@@ -208,3 +208,25 @@ document.addEventListener("DOMContentLoaded", function () {
         animateProjectTitle();
     }
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const contactSection = document.querySelector('#contact');
+
+    if (contactSection) {
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from(contactSection, {
+            y: 100,
+            opacity: 0,
+            duration: 1,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: contactSection,
+                start: 'top 80%',
+                end: 'bottom 80%',
+                toggleActions: 'play none none reverse',
+            }
+        });
+    }
+});
+
