@@ -19,11 +19,7 @@
     <link rel="shortcut icon" href="./images/favicon.gif" type="image/x-icon">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/cyberpunk-css-main/cyberpunk.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -62,18 +58,18 @@
             <a class="navbar-brand" href="#home" id="roles">Bit Academy Student</a>
             <div class="d-flex flex-row gap-3" id="social-links">
                 <a class="hoverable btn-link" aria-label="Email Link" href="mailto:be.langley@icloud.com">
-                    <img src="./images/icons/email.png" alt="Email" class="social-icon drop-shadow">
+                    <img src="./images/icons/email.png" alt="Email" class="social-icon">
                 </a>
                 <a class="hoverable btn-link" aria-label="Github Link" href="https://github.com/brianlangley"
                     target="_blank">
-                    <img src="./images/icons/github.png" alt="GitHub" class="social-icon drop-shadow">
+                    <img src="./images/icons/github.png" alt="GitHub" class="social-icon">
                 </a>
                 <a class="hoverable btn-link" aria-label="LinkedIn Link" href="https://www.linkedin.com/in/bel97/"
                     target="_blank">
-                    <img src="./images/icons/linkedin.png" alt="LinkedIn" class="social-icon drop-shadow">
+                    <img src="./images/icons/linkedin.png" alt="LinkedIn" class="social-icon">
                 </a>
                 <a class="hoverable btn-link" aria-label="Download CV" href="./assets/CV Brian Langley.pdf" download>
-                    <img src="./images/icons/cv.png" alt="CV" class="social-icon drop-shadow">
+                    <img src="./images/icons/cv.png" alt="CV" class="social-icon">
                 </a>
             </div>
         </div>
@@ -295,14 +291,14 @@
                                         placeholder="Write your message here..." style="min-height: 33vh;" required
                                         name="message"></textarea>
                                 </div>
-
-
-                                <div class="text-center">
-                                    <input class="w-100 cyber-button-big bg-yellow text-dark m-4 subFont" type="submit"
-                                        style="max-width: 50vw;" onmouseover="this.classList.add('cyber-glitch-0')"
-                                        onmouseout="this.classList.remove('cyber-glitch-0')"></input>
-                                </div>
-
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn w-100 cyber-button bg-yellow text-dark m-4"
+                                    style="max-width: 50vw;" onmouseover="this.classList.add('cyber-glitch-0')"
+                                    onmouseout="this.classList.remove('cyber-glitch-0')" value="submit">
+                                    <span class="subFont">Send your message</span>
+                                    <span class="glitchtext subFont">Contact</span>
+                                </button>
                             </div>
                         </form>
                     </div>
@@ -314,6 +310,8 @@
     <script src="./js/loader.js"></script>
     <script src="./js/nav.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
 
 </body>
 
