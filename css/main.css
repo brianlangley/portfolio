@@ -14,8 +14,6 @@
 }
 
 /* Import fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-
 @font-face {
     font-family: "Network";
     src: url("../fonts/NetworkFreeVersion.ttf");
@@ -188,10 +186,12 @@ a#roles.navbar-brand {
     background: transparent;
     font-size: 1em;
     padding: .5em;
+    color: black;
 }
 
 #social-links {
     margin-right: 3em;
+    margin-left: 1.5em;
 }
 
 .social-icon {

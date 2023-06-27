@@ -102,36 +102,6 @@ if ('ontouchstart' in window) {
     document.body.style.cursor = 'default';
 }
 
-const scrollEffect = gsap.from(about, { x: '-100%', opacity: 0, duration: 1, paused: true });
-const isSmallScreen = window.innerWidth < 800;
-let isScrolling = false;
-let lastScrollTop = 0;
-
-if (!isSmallScreen) {
-    window.addEventListener('scroll', () => {
-        const st = window.pageYOffset || document.documentElement.scrollTop;
-
-        if (st > lastScrollTop) {
-            // Scrolling down
-            if (!isScrolling) {
-                scrollEffect.play();
-                isScrolling = true;
-            }
-        }
-
-        clearTimeout(isScrolling);
-        isScrolling = setTimeout(() => {
-            isScrolling = false;
-        }, 500);
-
-        lastScrollTop = st <= 0 ? 0 : st;
-    });
-} else {
-    setTimeout(() => {
-        scrollEffect.play();
-    }, 1000);
-}
-
 // Function to animate the articles
 function animateArticles() {
     const article1 = document.querySelector("#project1");
@@ -212,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Wait for the document to be fully loaded
 document.addEventListener('DOMContentLoaded', function () {
     // Select the elements you want to animate
-    const sections = document.querySelectorAll('.mainContent');
+    const sections = document.querySelectorAll('section');
 
     // Loop through each section
     sections.forEach(section => {
@@ -226,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function () {
             ease: 'power2.out',
             scrollTrigger: {
                 trigger: section,
-                start: 'top 80%',
+                start: 'top 60%',
                 end: 'bottom 80%',
                 toggleActions: 'play none none reverse',
             }
