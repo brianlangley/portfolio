@@ -244,31 +244,26 @@
             <div class="mb-5 border border-3 border-light cyber-tile-big shadow-lg">
                 <div class="container-fluid py-5 d-flex flex-column align-items-center justify-content-center">
                     <div class="col-md-7 col-lg-8">
-
                         <h2 class="mb-3 mainFont">Contact Information</h2>
                         <p class="lead subFont">
                             Feel free to contact me with any questions or inquiries you may have. I am always open to
-                            discussing new projects, creative ideas, or opportunities to be part apart of.
+                            discussing new projects, creative ideas, or opportunities to be a part apart of.
                         </p>
 
-                        <form class="needs-validation" action="email.php" method="POST">
+                        <form data-netlify="true" action="/" method="POST">
+                            <input type="hidden" name="form-name" value="contact" />
 
                             <div class="row g-2">
-
                                 <div class="col-sm-6">
                                     <input type="text" class="form-control subFont px-2" name="firstName" id="firstName"
                                         placeholder="First name" value="" required>
-                                    <div class="invalid-feedback">
-                                        Valid first name is required.
-                                    </div>
+                                    <div class="invalid-feedback">Valid first name is required.</div>
                                 </div>
 
                                 <div class="col-sm-6">
                                     <input type="text" class="form-control subFont px-2" name="lastName" id="lastName"
                                         placeholder="Last name" value="" required>
-                                    <div class="invalid-feedback">
-                                        Valid last name is required.
-                                    </div>
+                                    <div class="invalid-feedback">Valid last name is required.</div>
                                 </div>
 
                                 <div class="col-12">
@@ -276,9 +271,7 @@
                                         <span class="input-group-text subFont border-right-0">@</span>
                                         <input type="email" class="form-control subFont border-left-0" id="email"
                                             name="email" placeholder="you@email.com" required>
-                                        <div class="invalid-feedback">
-                                            Your email is required.
-                                        </div>
+                                        <div class="invalid-feedback">Your email is required.</div>
                                     </div>
                                 </div>
 
@@ -287,7 +280,6 @@
                                         placeholder="Write your message here..." style="min-height: 33vh;" required
                                         name="message"></textarea>
                                 </div>
-
                             </div>
 
                             <div class="text-center">
@@ -298,13 +290,12 @@
                                     <span class="glitchtext subFont">Contact</span>
                                 </button>
                             </div>
-
                         </form>
-
                     </div>
                 </div>
             </div>
         </section>
+
     </main>
 
     <script src="./js/loader.js"></script>

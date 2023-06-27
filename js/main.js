@@ -163,20 +163,8 @@ function animateProjectTitle() {
 
 // Call the initialization function once the document is ready
 document.addEventListener("DOMContentLoaded", function () {
-    const isSmallScreen = window.innerWidth < 800;
-
-    if (isSmallScreen) {
-        // Remove animations for smaller screens
-        const articles = document.querySelectorAll(".article");
-        articles.forEach((article) => {
-            article.style.opacity = 1;
-        });
-        const projectTitle = document.querySelector("#project-title");
-        projectTitle.style.opacity = 1;
-    } else {
-        initProjectAnimations();
-        animateProjectTitle();
-    }
+    initProjectAnimations();
+    animateProjectTitle();
 });
 
 // Wait for the document to be fully loaded
