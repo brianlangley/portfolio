@@ -34,54 +34,50 @@
 
 <body>
 
-    <head>
-        <div class="cursor">
-            <div class="cursorCircle cursorXL ">
-                <svg height="30" width="30">
-                    <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
-                </svg>
-            </div>
-
-            <div class="cursorCircle cursorSM">
-                <svg height="10" width="10">
-                    <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
-                </svg>
-            </div>
+    <div class="cursor">
+        <div class="cursorCircle cursorXL ">
+            <svg height="30" width="30">
+                <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+            </svg>
         </div>
 
-        <div class="preloader-container">
-            <div class="sticker-animation">
-                <img src="./images/Hello_my_name_is_sticker.png" alt="Hello my name is sticker" id="loaderSticker"
-                    class="animate__animated animate__fadeInDownBig">
-                <h1 class="preloader-text">Brian</h1>
-            </div>
-            <audio src="./sound/spray.mp3" autoplay></audio>
+        <div class="cursorCircle cursorSM">
+            <svg height="10" width="10">
+                <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+            </svg>
         </div>
+    </div>
 
-        <nav class="navbar navbar-expand-lg navbar-light align-items-center d-flex flex-row flex-wrap" id="nav">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#home" id="roles">Bit Academy Student</a>
-                <div class="d-flex flex-row gap-3" id="social-links">
-                    <a class="hoverable btn-link" aria-label="Email Link" href="mailto:be.langley@icloud.com">
-                        <img src="./images/icons/email.png" alt="Email" class="social-icon">
-                    </a>
-                    <a class="hoverable btn-link" aria-label="Github Link" href="https://github.com/brianlangley"
-                        target="_blank">
-                        <img src="./images/icons/github.png" alt="GitHub" class="social-icon">
-                    </a>
-                    <a class="hoverable btn-link" aria-label="LinkedIn Link" href="https://www.linkedin.com/in/bel97/"
-                        target="_blank">
-                        <img src="./images/icons/linkedin.png" alt="LinkedIn" class="social-icon">
-                    </a>
-                    <a class="hoverable btn-link" aria-label="Download CV" href="./assets/CV Brian Langley.pdf"
-                        download>
-                        <img src="./images/icons/cv.png" alt="CV" class="social-icon">
-                    </a>
-                </div>
+    <div class="preloader-container">
+        <div class="sticker-animation">
+            <img src="./images/Hello_my_name_is_sticker.png" alt="Hello my name is sticker" id="loaderSticker"
+                class="animate__animated animate__fadeInDownBig">
+            <h1 class="preloader-text">Brian</h1>
+        </div>
+        <audio src="./sound/spray.mp3" autoplay></audio>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light align-items-center d-flex flex-row flex-wrap" id="nav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#home" id="roles">Bit Academy Student</a>
+            <div class="d-flex flex-row gap-3" id="social-links">
+                <a class="hoverable btn-link" aria-label="Email Link" href="mailto:be.langley@icloud.com">
+                    <img src="./images/icons/email.png" alt="Email" class="social-icon">
+                </a>
+                <a class="hoverable btn-link" aria-label="Github Link" href="https://github.com/brianlangley"
+                    target="_blank">
+                    <img src="./images/icons/github.png" alt="GitHub" class="social-icon">
+                </a>
+                <a class="hoverable btn-link" aria-label="LinkedIn Link" href="https://www.linkedin.com/in/bel97/"
+                    target="_blank">
+                    <img src="./images/icons/linkedin.png" alt="LinkedIn" class="social-icon">
+                </a>
+                <a class="hoverable btn-link" aria-label="Download CV" href="./assets/CV Brian Langley.pdf" download>
+                    <img src="./images/icons/cv.png" alt="CV" class="social-icon">
+                </a>
             </div>
-        </nav>
-    </head>
-
+        </div>
+    </nav>
     <main>
 
         <section id="home" class="mainContent">
@@ -258,10 +254,9 @@
                         </p>
 
                         <form name="contact" method="POST" netlify netlify-honeypot="bot-field"
-                            data-netlify-recaptcha="true" action="./confirmation.html">
+                            data-netlify-recaptcha="true" action="confirmation.html">
 
                             <input type="hidden" name="form-name" value="contact" />
-                            <input type="hidden" name="form-name" value="contactForm" />
 
                             <div class="row g-2">
                                 <div class="col-sm-6">
