@@ -2,12 +2,23 @@ const nav = document.querySelector('.navbar');
 const home = document.querySelector('#home');
 const about = document.querySelector('#about');
 const cursor = document.querySelector('.cursor');
+const bigBall = document.querySelector('.cursorXL');
+const smallBall = document.querySelector('.cursorSM');
+const hoverables = document.querySelectorAll('.hoverable');
+const startMouse = document.getElementById('startMouse');
+const projectsSection = document.querySelector("#projects");
+const projectTitle = document.querySelector("#project-title");
+const sectionsContact = document.querySelectorAll('#contact');
+const sectionsAbout = document.querySelectorAll('#about');
+
+document.body.style.cursor = 'none'; // Hide mouse cursor
 
 // Touch screen detection, disable the cursor
 if ('ontouchstart' in window) {
     document.body.style.cursor = 'default';
-    // Disable the cursor
     cursor.style.display = 'none';
+    bigBall.style.display = 'none';
+    smallBall.style.display = 'none';
 }
 
 // Check if preloader has played
@@ -22,12 +33,6 @@ if (preloaderPlayed) {
     gsap.from(home, { opacity: 0, duration: 4, delay: 16, y: 60 });
 }
 
-document.body.style.cursor = 'none';
-const bigBall = document.querySelector('.cursorXL');
-const smallBall = document.querySelector('.cursorSM');
-const hoverables = document.querySelectorAll('.hoverable');
-const startMouse = document.getElementById('startMouse');
-
 TweenMax.set(bigBall, {
     x: startMouse.getBoundingClientRect().left - 15,
     y: startMouse.getBoundingClientRect().top - 15
@@ -36,14 +41,6 @@ TweenMax.set(bigBall, {
 TweenMax.set(smallBall, {
     x: startMouse.getBoundingClientRect().left - 5,
     y: startMouse.getBoundingClientRect().top - 14
-});
-
-document.body.addEventListener('mousemove', onMouseMove);
-document.addEventListener('mousedown', onMouseDown);
-document.addEventListener('mouseup', onMouseUp);
-hoverables.forEach(hoverable => {
-    hoverable.addEventListener('mouseenter', onMouseHover);
-    hoverable.addEventListener('mouseleave', onMouseHoverOut);
 });
 
 function onMouseMove(e) {
@@ -90,26 +87,23 @@ function onMouseHover() {
     });
 }
 
+document.body.addEventListener('mousemove', onMouseMove);
+document.addEventListener('mousedown', onMouseDown);
+document.addEventListener('mouseup', onMouseUp);
+hoverables.forEach(hoverable => {
+    hoverable.addEventListener('mouseenter', onMouseHover);
+    hoverable.addEventListener('mouseleave', onMouseHoverOut);
+});
+
 document.addEventListener('selectstart', e => {
     e.preventDefault();
 });
 
 window.addEventListener('mousemove', onMouseMove);
 
-if ('ontouchstart' in window) {
-    bigBall.style.display = 'none';
-    smallBall.style.display = 'none';
-    document.body.style.cursor = 'default';
-}
-
 // Function to animate the articles
 function animateArticles() {
-    const article1 = document.querySelector("#project1");
-    const article2 = document.querySelector("#project2");
-    const article3 = document.querySelector("#project3");
-    const github = document.querySelector("#githubLink");
-
-    const articles = [article1, article2, article3, github];
+    const articles = [document.querySelector("#project1"), document.querySelector("#project2"), document.querySelector("#project3"), document.querySelector("#githubLink")];
 
     articles.forEach((article, index) => {
         let direction = index % 2 === 0 ? "100%" : "-100%";
@@ -123,24 +117,23 @@ function animateArticles() {
             x: direction,
             opacity: 0,
             duration: 1,
-            delay: index * 0.5, // Adjust the delay value as desired
+            delay: index * 0.5,
         });
     });
 }
 
 // Function to initialize the animations when the #projects section is in view
 function initProjectAnimations() {
-    const projectsSection = document.querySelector("#projects");
     const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     animateArticles();
-                    observer.unobserve(projectsSection); // Stop observing once the animations are triggered
+                    observer.unobserve(projectsSection);
                 }
             });
         },
-        { rootMargin: "0px" } // Adjust the rootMargin value as desired
+        { rootMargin: "0px" }
     );
 
     observer.observe(projectsSection);
@@ -148,7 +141,6 @@ function initProjectAnimations() {
 
 // Function to animate the project title
 function animateProjectTitle() {
-    const projectTitle = document.querySelector("#project-title");
     gsap.from(projectTitle, {
         scrollTrigger: {
             trigger: projectTitle,
@@ -161,20 +153,13 @@ function animateProjectTitle() {
     });
 }
 
-// Call the initialization function once the document is ready
+// Call the initialization functions once the document is ready
 document.addEventListener("DOMContentLoaded", function () {
     initProjectAnimations();
     animateProjectTitle();
-});
 
-// Wait for the document to be fully loaded
-document.addEventListener('DOMContentLoaded', function () {
-    // Select the elements you want to animate
-    const sections = document.querySelectorAll('#contact');
-
-    // Loop through each section
-    sections.forEach(section => {
-        // Create a new ScrollTrigger for each section
+    // Animate sections in the 'contact' category
+    sectionsContact.forEach(section => {
         gsap.registerPlugin(ScrollTrigger);
 
         gsap.from(section, {
@@ -190,16 +175,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
-});
 
-// Wait for the document to be fully loaded
-document.addEventListener('DOMContentLoaded', function () {
-    // Select the elements you want to animate
-    const sections = document.querySelectorAll('#about');
-
-    // Loop through each section
-    sections.forEach(section => {
-        // Create a new ScrollTrigger for each section
+    // Animate sections in the 'about' category
+    sectionsAbout.forEach(section => {
         gsap.registerPlugin(ScrollTrigger);
 
         gsap.from(section, {
