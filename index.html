@@ -250,7 +250,8 @@
                             discussing new projects, creative ideas, or opportunities to be a part apart of.
                         </p>
 
-                        <form name="contact" action="/" method="POST" netlify>
+                        <form name="contact" action="/" method="POST" netlify netlify-honeypot="bot-field"
+                            data-netlify-recaptcha="true">
                             <input type="hidden" name="form-name" value="contact" />
 
                             <div class="row g-2">
