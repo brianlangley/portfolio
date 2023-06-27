@@ -116,7 +116,7 @@ function animateArticles() {
         gsap.from(article, {
             scrollTrigger: {
                 trigger: article,
-                start: "top 80%",
+                start: "top 75%",
                 end: "bottom 80%",
                 toggleActions: "play none none reverse",
             },
@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Wait for the document to be fully loaded
 document.addEventListener('DOMContentLoaded', function () {
     // Select the elements you want to animate
-    const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll('#contact');
 
     // Loop through each section
     sections.forEach(section => {
@@ -196,7 +196,32 @@ document.addEventListener('DOMContentLoaded', function () {
             ease: 'power2.out',
             scrollTrigger: {
                 trigger: section,
-                start: 'top 60%',
+                start: 'top 40%',
+                end: 'bottom 80%',
+                toggleActions: 'play none none reverse',
+            }
+        });
+    });
+});
+
+// Wait for the document to be fully loaded
+document.addEventListener('DOMContentLoaded', function () {
+    // Select the elements you want to animate
+    const sections = document.querySelectorAll('#about');
+
+    // Loop through each section
+    sections.forEach(section => {
+        // Create a new ScrollTrigger for each section
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from(section, {
+            y: 100,
+            opacity: 0,
+            duration: 1,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: section,
+                start: 'top 70%',
                 end: 'bottom 80%',
                 toggleActions: 'play none none reverse',
             }
