@@ -259,6 +259,7 @@
 
                         <form name="contact" method="POST" netlify netlify-honeypot="bot-field"
                             data-netlify-recaptcha="true">
+
                             <input type="hidden" name="form-name" value="contact" />
 
                             <div class="row g-2">
@@ -275,9 +276,9 @@
                                 </div>
 
                                 <div class="col-12">
-                                    <div class="input-group has-validation">
+                                    <div class="input-group">
                                         <span class="input-group-text subFont border-right-0">@</span>
-                                        <input type="email" class="form-control subFont border-left-0" id="email"
+                                        <input type="email" class="form-control subFont rounded-right" id="email"
                                             name="email" placeholder="you@email.com" required>
                                         <div class="invalid-feedback">Your email is required.</div>
                                     </div>
@@ -293,7 +294,7 @@
                             <div class="text-center">
                                 <button type="submit" class="btn w-100 cyber-button bg-yellow text-dark m-4"
                                     style="max-width: 50vw;" onmouseover="this.classList.add('cyber-glitch-0')"
-                                    onmouseout="this.classList.remove('cyber-glitch-0')" value="submit">
+                                    onmouseout="this.classList.remove('cyber-glitch-0')" value="submit" name="submit">
                                     <span class="subFont">Send your message</span>
                                     <span class="glitchtext subFont">Contact</span>
                                 </button>
