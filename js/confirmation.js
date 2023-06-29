@@ -1,6 +1,6 @@
 // Function to redirect to the homepage after 10 seconds
 function redirectHome() {
-    let countdown = 10;
+    let countdown = 15;
     let countdownElement = document.getElementById("countdown");
 
     countdownElement.innerText = `Redirecting in ${countdown} seconds`;
