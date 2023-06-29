@@ -187,7 +187,6 @@ nav {
 
 #roles {
     margin-left: 3vw;
-    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
     color: black;
 }
 
@@ -204,8 +203,9 @@ a#roles.navbar-brand {
 }
 
 .social-icon {
-    width: 2.2rem;
+    width: 2.5rem;
     height: auto;
+    margin-right: 1rem;
 }
 
 /* Media Queries */

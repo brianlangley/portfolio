@@ -6,8 +6,8 @@ const handleSubmit = (event) => {
 
     fetch("/", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString(),
     })
         .then(() => {
             console.log("Form successfully submitted");
