@@ -10,14 +10,11 @@ const handleSubmit = (event) => {
         body: new URLSearchParams(formData).toString(),
     })
         .then(() => {
-            // Handle success, such as displaying a success message
             console.log("Form successfully submitted");
-            // You can also redirect the user to a thank-you page if desired
             window.location.href = "confirmation.html";
         })
         .catch((error) => {
-            // Handle error, such as displaying an error message
-            alert(error);
+            console.log(error);
         });
 };
 
