@@ -103,7 +103,7 @@ window.addEventListener('mousemove', onMouseMove);
 
 // Function to animate the articles
 function animateArticles() {
-    const articles = [document.querySelector("#project1"), document.querySelector("#project2"), document.querySelector("#project3"), document.querySelector("#githubLink")];
+    const articles = [document.querySelector("#project1"), document.querySelector("#project2"), document.querySelector("#project3"),document.querySelector('#project4'), document.querySelector("#githubLink")];
 
     articles.forEach((article, index) => {
         let direction = index % 2 === 0 ? "100%" : "-100%";
